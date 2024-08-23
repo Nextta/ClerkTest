@@ -1,5 +1,5 @@
 ---
-import { SignedIn, SignedOut, UserButton, SignInButton } from '@clerk/astro/components';
+import { SignedIn, SignedOut, UserButton } from '@clerk/astro/components';
 
 var title = "Test de Clerk";
 ---
@@ -16,7 +16,7 @@ var title = "Test de Clerk";
       <h1>{title}</h1>
       <nav>
         <SignedOut>
-          <SignInButton mode="modal" />
+          <a href="/sign">Sign In</a>
         </SignedOut>
         <SignedIn>
           <UserButton />
