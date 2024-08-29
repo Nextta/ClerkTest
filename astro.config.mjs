@@ -6,5 +6,7 @@ import cloudflare from "@astrojs/cloudflare";
 export default defineConfig({
   integrations: [clerk()],
   output: "server",
-  adapter: cloudflare()
+  adapter: cloudflare({
+    imageService: 'cloudflare'
+ })
 });

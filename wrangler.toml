@@ -1,0 +1,9 @@
+name = "my-worker-dev"
+
+[env.staging.vars]
+PUBLIC_CLERK_PUBLISHABLE_KEY="pk_test_dHJ1c3R5LXBlcmNoLTg4LmNsZXJrLmFjY291bnRzLmRldiQ"
+CLERK_SECRET_KEY="sk_test_9nTnad2BC4Ins8XhhmOBgp5EFIrho4odBCmqgRwrfz"
+
+[env.production.vars]
+PUBLIC_CLERK_PUBLISHABLE_KEY="pk_test_dHJ1c3R5LXBlcmNoLTg4LmNsZXJrLmFjY291bnRzLmRldiQ"
+CLERK_SECRET_KEY="sk_test_9nTnad2BC4Ins8XhhmOBgp5EFIrho4odBCmqgRwrfz"
