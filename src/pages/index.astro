@@ -2,12 +2,18 @@
 import SiteLayout from '../layouts/SiteLayout.astro';
 
 const { userId } = Astro.locals.auth();
+const user = await Astro.locals.currentUser();
 ---
 
 <SiteLayout title="Clerk + Astro">
   <p>Sign in to try Clerk out!</p>
   {
-	userId ? <h1>{userId}</h1> : ""
+	userId && user ? (
+	<h3>User ID: {userId}</h3>
+	<h3>Username: {user.fullName}</h3>
+	<h3>Email: {user.emailAddresses[0].emailAddress}</h3>
+	<img src={user.imageUrl} alt="Profile picture" style="width: 5%;">
+	) : ("")
   }
 </SiteLayout>
 <style>
