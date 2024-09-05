@@ -1,9 +1,14 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
+
+const { userId } = Astro.locals.auth();
 ---
 
 <SiteLayout title="Clerk + Astro">
   <p>Sign in to try Clerk out!</p>
+  {
+	userId ? <h1>{userId}</h1> : ""
+  }
 </SiteLayout>
 <style>
 	main {
